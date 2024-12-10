@@ -1,0 +1,38 @@
+{
+    "name": "nlp-news-evaluation",
+    "version": "1.0.0",
+    "main": "webpack.dev.js",
+    "type": "module",
+    "scripts": {
+        "start": "webpack serve --config webpack.dev.cjs",
+        "build": "webpack --config webpack.prod.cjs",
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "An NLP news evaluation tool using MeaningCloud API.",
+    "dependencies": {
+        "cheerio": "^1.0.0",
+        "dotenv": "^16.3.1",
+        "node-fetch": "^3.3.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "babel-loader": "^9.2.1",
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "css-loader": "^7.1.2",
+        "express": "^4.21.2",
+        "html-webpack-plugin": "^5.6.3",
+        "jest": "^29.7.0",
+        "sass": "^1.82.0",
+        "sass-loader": "^16.0.4",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.1.0",
+        "workbox-webpack-plugin": "^7.3.0"
+    }
+}

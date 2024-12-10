@@ -1,0 +1,16 @@
+@use 'header';
+@use 'footer';
+@use 'form';
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+    color: #444;
+}
+
+/* Importing other styles */
+@include header.style();
+@include footer.style();
+@include form.style();

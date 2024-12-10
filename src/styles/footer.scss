@@ -1,0 +1,16 @@
+@mixin style() {
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: linear-gradient(90deg, #ff7eb3, #ff5678);
+        color: white;
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #fff;
+    }
+}
