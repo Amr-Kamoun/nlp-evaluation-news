@@ -1,112 +1,96 @@
-# **Evaluate News Article with NLP**
+# Evaluate News Article with NLP
 
-This project evaluates news articles using Natural Language Processing (NLP). It integrates a mock NLP API to analyze the sentiment and subjectivity of a given text or URL. The app is built using modern JavaScript and Webpack and includes offline functionality with service workers.
-
----
-
-## **Project Features**
-- Sentiment analysis (e.g., positive/negative).
-- Subjectivity analysis (e.g., subjective/objective).
-- Responsive user interface with a clean form layout.
-- Offline functionality using Workbox-generated service workers.
-- Modular SCSS styles using `@use` for better maintainability.
-- Unit testing with Jest.
+This project allows users to analyze the sentiment and subjectivity of text or news articles by leveraging the MeaningCloud API. Users can input plain text or a URL, and the application will extract meaningful content and provide an analysis.
 
 ---
 
-## **Folder Structure**
-```plaintext
-├── .gitignore
-├── README.md
-├── package.json
-├── webpack.dev.js
-├── webpack.prod.js
-└── src
-    ├── views
-    │   └── index.html
-    ├── js
-    │   ├── app.js
-    │   └── formHandler.js
-    ├── styles
-    │   ├── base.scss
-    │   ├── header.scss
-    │   ├── footer.scss
-    │   └── form.scss
-    └── server
-        └── server.js
-```
+## Features
+- Sentiment analysis (Positive, Neutral, Negative)
+- Subjectivity classification (Subjective, Objective)
+- URL content extraction and analysis
+- Modern, colorful, and responsive user interface
+- Real-time results displayed on the page
 
 ---
 
-## **How to Run the Project**
+## How to Run
 
-### **1. Clone the Repository**
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/nlp-news-evaluation.git
+git clone <repository-url>
 cd nlp-news-evaluation
 ```
 
-### **2. Install Dependencies**
-Make sure you have Node.js installed, then run:
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-### **3. Run the Development Server**
-To start the application in development mode:
+### 3. Set Up Environment Variables
+Create a `.env` file in the root directory and add your MeaningCloud API key:
+```
+MEANINGCLOUD_API_KEY=your_api_key_here
+```
+
+### 4. Start the Development Server
 ```bash
 npm run start
 ```
-The app will be available at `http://localhost:8080`.
+Visit the application at `http://localhost:8080`.
 
-### **4. Build for Production**
-To create a production build:
+### 5. Build for Production
 ```bash
 npm run build
 ```
-The build files will be in the `dist` folder.
+The production files will be available in the `dist` directory.
 
-### **5. Run the Backend Server**
-To start the backend server:
-```bash
-node src/server/server.js
+---
+
+## Project Structure
+```plaintext
+nlp-news-evaluation/
+├── src/
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── formHandler.js
+│   ├── styles/
+│   │   ├── base.scss
+│   │   ├── header.scss
+│   │   ├── form.scss
+│   │   ├── footer.scss
+│   ├── views/
+│   │   ├── index.html
+│   ├── server/
+│       ├── server.js
+├── webpack.dev.cjs
+├── webpack.prod.cjs
+├── package.json
+├── .env
+├── .gitignore
+└── README.md
 ```
-The backend server will be available at `http://localhost:8081`.
 
 ---
 
-## **API Integration**
-This app interacts with a mock NLP API:
-- **POST `/api`**: Accepts a text input and returns:
-  - **Polarity** (e.g., positive/negative).
-  - **Subjectivity** (e.g., subjective/objective).
-  - The input text.
-
----
-
-## **Testing**
-The project uses Jest for unit testing. To run the tests:
-```bash
-npm run test
-```
-
----
-
-## **Dependencies**
+## Dependencies
 - **Frontend**:
   - Webpack
-  - Babel
   - Sass
+  - Babel
+  - HTML
+
 - **Backend**:
+  - Node.js
   - Express
-  - Body-parser
-  - CORS
-- **Testing**:
-  - Jest
-- **Offline**:
-  - Workbox
+  - Cheerio (for URL content extraction)
+  - MeaningCloud API
 
 ---
 
-## **License**
+## Contributions
+Contributions are welcome! Feel free to submit a pull request or open an issue to suggest improvements.
+
+---
+
+## License
 This project is licensed under the MIT License.
